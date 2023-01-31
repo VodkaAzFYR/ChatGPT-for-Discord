@@ -16,6 +16,7 @@ async def ask(ctx, *args):
     for i in args:
         message += i + " "
     # print(message)
+    await ctx.send(f"Generuję odpowiedź...")
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=f"{message[:-1]}",
