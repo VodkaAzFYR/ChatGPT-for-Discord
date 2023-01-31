@@ -3,9 +3,9 @@ from discord.ext import commands
 import discord
 
 # OpenAI API KEY
-openai.api_key = ''
+openai.api_key = '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'
 # Discord app token
-discord_token = ''
+discord_token = 'MTA2OTYzMzI0OTkxNzI4MDMwNw.GPCDwy.o8je9AqVMi9TKzThY53VUpGXkT3T2zfv9PwKbk'
 
 intents = discord.Intents.all()
 intents.members = True
