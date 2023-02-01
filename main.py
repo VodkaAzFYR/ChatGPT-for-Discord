@@ -21,15 +21,15 @@ async def ask(ctx, *args):
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=f"{message[:-1]}",
-            max_tokens=4000,
+            max_tokens=4050,
             n=1,
             stop=None,
             temperature=0.5,
         ).choices[0].text
-    except Exception:
+        await ctx.send(f"<@{ctx.message.author.id}> {response}")
+    except Exception as e:
         await ctx.send(f"Wystąpił błąd. Spróbuj jeszcze raz")
-    await ctx.send(f"<@{ctx.message.author.id}> {response}")
-
+        print(e)
 bot.run(discord_token)
 
 
